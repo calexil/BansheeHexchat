@@ -66,7 +66,7 @@ sub bcur {
 		my $status = substr($rawstatus,0,length($rawstatus) -1);
 		
 		my $listening ="is listening to: \cC25$title"." \cC20by \cC25$artist"." \cC20on \cC25$album ";
-		command("me $listening");
+		command("me  $listening");
 	}
 }
 
