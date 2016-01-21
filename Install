@@ -1,0 +1,5 @@
+To install simple move the .pl file to ~/.config/hexchat or ~/.config/xchat
+
+Start Hexchat/xchat and navigate to Window>Plugins and scripts>Load>navigate to location of .pl script and load it.
+
+Type /bhelp in hexchat/xchat for list of commands
