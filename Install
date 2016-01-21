@@ -1,4 +1,4 @@
-To install simple move the .pl file to ~/.config/hexchat or ~/.config/xchat
+To install simple move the .pl file to ~/.config/hexchat/addons or ~/.config/xchat/addons
 
 Start Hexchat/xchat and navigate to Window>Plugins and scripts>Load>navigate to location of .pl script and load it.
 
