@@ -3,3 +3,5 @@ To install simple move the .pl file to ~/.config/hexchat/addons or ~/.config/xch
 Start Hexchat/xchat and navigate to Window>Plugins and scripts>Load>navigate to location of .pl script and load it.
 
 Type /bhelp in hexchat/xchat for list of commands
+
+rev 1.0.2 - 041316

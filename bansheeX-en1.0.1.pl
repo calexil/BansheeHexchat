@@ -2,7 +2,7 @@
 
 # BansheeX - Simple script for using Banshee in Xchat
 # Copyright (C) 2013  Auze <twitter: @Auze_>
-#
+# Script revisions by @calexil /u/calexil https://github.com/calexil
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, either version 3 of the License, or
@@ -15,13 +15,13 @@
 #
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
-#This script was modified by Calexil <twitter: @calexil>
+
 
 use strict;
 use Xchat qw( :all);
 
 # Register plugin in Xchat
-register('BansheeX', '1.0.1', 'Simple Script for using Banshee in Xchat-Hexchat');
+register('BansheeX', '1.0.2', 'Simple Script for using Banshee in Xchat-Hexchat');
 
 # Welcome Message
 command("echo ###########");
@@ -230,7 +230,7 @@ sub btest {
 
 # The About function ;) 
 sub babout {
-	command("me BansheeX 1.0 - A simple perl script for using Banshee in Xchat - Auze ")
+	command("me BansheeX 1.0.2 - A simple perl script for using Banshee in Xchat-Hexchat - Auze, calexil")
 }
 
 # Display list of BansheeX command
