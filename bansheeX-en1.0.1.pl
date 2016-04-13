@@ -21,7 +21,7 @@ use strict;
 use Xchat qw( :all);
 
 # Register plugin in Xchat
-register('BansheeX', '1.0.1', 'Simple Script for using Banshee in Xchat');
+register('BansheeX', '1.0.1', 'Simple Script for using Banshee in Xchat-Hexchat');
 
 # Welcome Message
 command("echo ###########");
@@ -120,8 +120,8 @@ sub bplay {
 sub bpause {
 	my $run = &btest();
 	if ($run == 0) {
-		`banshee --pause`;
-		command("echo Banshee is pausing");
+		`banshee --toggle-playing`;
+		command("echo Banshee is pausing, run bpause to resume playing");
 	}
 }
 
