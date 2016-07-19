@@ -25,7 +25,7 @@ register('BansheeX', '1.0.2', 'Simple Script for using Banshee in Xchat-Hexchat'
 
 # Welcome Message
 command("echo ###########");
-command("echo BansheeX Script 1.0.1");
+command("echo BansheeX Script 1.0.2");
 command("echo Simple Script for using Banshee in Xchat");
 command("echo Author : Auze @ Absylonia");
 command("echo Contributors : calexil:  /u/calexil");
