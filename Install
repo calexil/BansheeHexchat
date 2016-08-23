@@ -1,9 +1,11 @@
-To install simple move the .pl file to ~/.config/hexchat/addons or ~/.config/xchat/addons
+To install simple move the .pl perl script to ~/.config/hexchat/addons or ~/.config/xchat/addons
 
-Start Hexchat/xchat and navigate to Window>Plugins and scripts>Load>navigate to location of .pl script and load it.
+Start HexChat/Xchat and navigate to Window>Plugins and scripts>Load>navigate to location of .pl script and load it.
 
-You will need the hexchat perl plugin installed:                 sudo apt install hexchat-perl
+You will need the hexchat-perl plugin installed:                 
+
+sudo apt install hexchat-perl
 
 Type /bhelp in hexchat/xchat for list of commands
 
-rev 1.0.2 - 041316
+rev 1.0.3 - 08/23/16

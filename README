@@ -1,5 +1,9 @@
 BansheeX - A simple perl script for using Banshee in Xchat and HexChat
 
+Ver 1.0.3:
+
+	- Revisions to version, code cleanup, about, title, startup, general attribution fixes.
+
 Ver 1.0.2 :
 
 	- Revisions to about, title, startup, general attribution fixes, banshee pause changed to toggle-playing for better player control

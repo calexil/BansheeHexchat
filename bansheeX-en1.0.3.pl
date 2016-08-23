@@ -1,8 +1,8 @@
 #!/usr/bin/perl -w
 
 # BansheeX - Simple script for using Banshee in Xchat
-# Copyright (C) 2013  Auze <twitter: @Auze_>
-#
+# Copyright (C) 2013-2016  Auze <twitter: @Auze_>
+# Script revisions by @calexil /u/calexil https://github.com/calexil
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, either version 3 of the License, or
@@ -15,24 +15,23 @@
 #
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
-#This script was modified by Calexil <twitter: @calexil>
 
 use strict;
 use Xchat qw( :all);
 
-# Register plugin in Xchat
-register('BansheeX', '1.0.1', 'Simple Script for using Banshee in Xchat');
+# Register plugin in Xchat/HexChat.
+register('BansheeX', '1.0.3', 'Simple Script for using Banshee in Xchat-Hexchat');
 
-# Welcome Message
+# Welcome Message.
 command("echo ###########");
-command("echo BansheeX Script 1.0.1");
-command("echo Simple Script for using Banshee in Xchat");
+command("echo BansheeX Script 1.0.3");
+command("echo Simple Script for using Banshee in Xchat-HexChat");
 command("echo Author : Auze @ Absylonia");
-command("echo Contributors : calexil:  /u/calexil");
+command("echo Contributors : calexil:  /u/calexil - @calexil");
 command("echo /bhelp for help");
 command("echo ###########");
 
-# Command list and function
+# Command list and function.
 hook_command('bcur', \&bcur);
 hook_command('bplay',\&bplay);
 hook_command('bpause',\&bpause);
@@ -44,7 +43,7 @@ hook_command('babout',\&babout);
 hook_command('btest',\&btest);
 hook_command('bhelp', \&help);
  
- # Display current track if running
+# Display current track if running.
 sub bcur {
 	
 	my $run = &btest();
@@ -66,11 +65,11 @@ sub bcur {
 		my $status = substr($rawstatus,0,length($rawstatus) -1);
 		
 		my $listening ="is listening to: \cC25$title"." \cC20by \cC25$artist"." \cC20on \cC25$album ";
-		command("me  $listening");
+		command("me $listening");
 	}
 }
 
-# Display stars for score instead of number
+# Display stars for score instead of number.
 sub starScore() {
 	
 	my $run = &btest();
@@ -107,7 +106,7 @@ sub starScore() {
 }
 
 
-# Play the current track
+# Play the current track.
 sub bplay {
 	my $run = &btest();
 	if ($run == 0) {
@@ -116,16 +115,16 @@ sub bplay {
 	}
 }
 
-# Pause Banshee
+# Pause Banshee.
 sub bpause {
 	my $run = &btest();
 	if ($run == 0) {
-		`banshee --pause`;
-		command("echo Banshee is pausing");
+		`banshee --toggle-playing`;
+		command("echo Banshee is pausing, run bpause to resume playing");
 	}
 }
 
-# Next track
+# Next track.
 sub bnext {
 	my $run = &btest();
 	if ($run == 0) {
@@ -134,7 +133,7 @@ sub bnext {
 	}
 }
 
-# Previous track
+# Previous track.
 sub bprev {
 	my $run = &btest();
 	if ($run == 0) {
@@ -143,7 +142,7 @@ sub bprev {
 	}
 }
 
-# Rating current track ( USAGE : /brate [rating] )
+# Rating current track ( USAGE : /brate [rating (0-5)] ).
 sub brate {
 	my $run = &btest();
 	if ($run == 0) {
@@ -205,7 +204,7 @@ sub brate {
 }
 
 
-# Display Banshee version
+# Display Banshee version.
 sub bvers {
 	my $run = &btest();
 	if ($run == 0) {
@@ -215,7 +214,7 @@ sub bvers {
 	}
 }
 
-# Test if Banshee currently running
+# Test if Banshee currently running.
 sub btest {
 	`pidof banshee`;
 	my $btest = $?;
@@ -228,12 +227,12 @@ sub btest {
 	}
 }
 
-# The About function ;) 
+# The About function.
 sub babout {
-	command("me BansheeX 1.0 - A simple perl script for using Banshee in Xchat - Auze ")
+	command("me BansheeX 1.0.3 - A simple perl script for using Banshee in Xchat-Hexchat - Auze, calexil")
 }
 
-# Display list of BansheeX command
+# Display list of BansheeX command.
 sub help {
 	command("echo List of available commands :");
 	command("echo bhelp - Display this help");
