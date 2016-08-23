@@ -27,7 +27,7 @@ command("echo ###########");
 command("echo BansheeX Script 1.0.3");
 command("echo Simple Script for using Banshee in Xchat-HexChat");
 command("echo Author : Auze @ Absylonia");
-command("echo Contributors : calexil:  /u/calexil - @calexil");
+command("echo Contributors : calexil:  http://reddit.com/u/calexil ");
 command("echo /bhelp for help");
 command("echo ###########");
 

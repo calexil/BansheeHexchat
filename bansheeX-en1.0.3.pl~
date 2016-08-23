@@ -27,7 +27,7 @@ command("echo ###########");
 command("echo BansheeX Script 1.0.3");
 command("echo Simple Script for using Banshee in Xchat-HexChat");
 command("echo Author : Auze @ Absylonia");
-command("echo Contributors : calexil:  /u/calexil - @calexil");
+command("echo Contributors : calexil:  /u/calexil - @ calexil");
 command("echo /bhelp for help");
 command("echo ###########");
 
@@ -204,7 +204,7 @@ sub brate {
 }
 
 
-# Display Banshee version
+# Display Banshee version.
 sub bvers {
 	my $run = &btest();
 	if ($run == 0) {
@@ -214,7 +214,7 @@ sub bvers {
 	}
 }
 
-# Test if Banshee currently running
+# Test if Banshee currently running.
 sub btest {
 	`pidof banshee`;
 	my $btest = $?;
@@ -227,12 +227,12 @@ sub btest {
 	}
 }
 
-# The About function ;) 
+# The About function.
 sub babout {
 	command("me BansheeX 1.0.3 - A simple perl script for using Banshee in Xchat-Hexchat - Auze, calexil")
 }
 
-# Display list of BansheeX command
+# Display list of BansheeX command.
 sub help {
 	command("echo List of available commands :");
 	command("echo bhelp - Display this help");
