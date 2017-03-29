@@ -64,7 +64,10 @@ sub bcur {
 		my $rawstatus = substr(`banshee --query-current-state`, 15);
 		my $status = substr($rawstatus,0,length($rawstatus) -1);
 		
-		my $listening ="is listening to: \cC25$title"." \cC20by \cC25$artist"." \cC20on \cC25$album ";
+		my $rawyear = substr(`banshee --query-year`,6);
+		my $year = substr($rawyear,0,length($rawyear) -1);		
+
+		my $listening ="is listening to: $title"." by $artist"." on $album [$year] ";
 		command("me $listening");
 	}
 }
@@ -246,4 +249,3 @@ sub help {
 	command("echo babout - Display script version");
 	command("echo btest - Test if banshee is running (0 if running)");
 }
-
